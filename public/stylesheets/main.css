@@ -1,0 +1,332 @@
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+
+}
+
+hr {
+    display: block;
+    clear: both;
+    margin: 1em 0px;
+    visibility: hidden;
+}
+
+.invisible {
+    display: none;
+}
+
+.cent {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+#message {
+    margin-top: 30px !important;
+}
+
+.playerImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.playerInfo {
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input#name {
+    text-transform: uppercase;
+}
+
+input#gameId {
+    text-transform: uppercase;
+}
+
+/* legend/cards */
+#gameArea {
+    margin-top: 30px !important;
+}
+
+.gameCard {
+    background-color: #D8CC98;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .1);
+    min-width: 110px !important;
+    max-width: 225px !important;
+    cursor: pointer;
+}
+
+.gameCard div {
+    position: relative;
+    top: -25px;
+    margin: 0px Auto;
+    height: 85%;
+    width: 96%;
+    border-radius: 5px;
+    border: 2px solid #777777;
+}
+
+.gameCard.revealed div,
+.gameCard.revealed span {
+    display: none;
+}
+
+.gameCard span {
+    position: relative;
+    display: block;
+    top: 33%;
+    margin: 0px Auto;
+    padding: 2%;
+    width: 90%;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gameCard.revealed.redCard {
+    background: url("/img/redCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.gameCard.revealed.blueCard {
+    background: url("/img/blueCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.gameCard.revealed.neutralCard {
+    background: url("/img/neutralCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.gameCard.revealed.assassinCard {
+    background: url("/img/assassinCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+#gameArea table {
+    margin: 0px Auto;
+    background-color: #000000;
+}
+
+#gameArea div.keyCard {
+    margin: 0px Auto;
+    padding: 10px;
+    border: #555555 solid 20px;
+    border-radius: 20px;
+    background-color: #000000;
+}
+
+#gameArea div h3.redTeamFirst {
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #E81D29;
+    border-radius: 10px;
+}
+
+#gameArea div h3.blueTeamFirst {
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #077DA8;
+    border-radius: 10px;
+}
+
+#gameArea table tr {
+    height: 88px !important
+}
+
+.legendCard {
+    width: 88px;
+    border: 8px solid #000000;
+    border-radius: 10px !important;
+}
+
+.legendCard.redCard {
+    background: url("/img/redLegendCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.legendCard.blueCard {
+    background: url("/img/blueLegendCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.legendCard.neutralCard {
+    background: url("/img/neutralLegendCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.legendCard.assassinCard {
+    background: url("/img/assassinLegendCard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+/* Player Type Switch */
+.text-danger {
+    color: #E03438;
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #086890;
+    font-weight: bold;
+}
+
+.switch.primary-switch label input[type=checkbox]:checked+.lever {
+    background-color: #077DA8;
+}
+
+.switch.primary-switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #086890;
+}
+
+.switch.danger-switch label input[type=checkbox]:checked+.lever {
+    background-color: #E81D29;
+}
+
+.switch.danger-switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #E03438;
+}
+
+.switch.round label .lever {
+    width: 54px;
+    height: 34px;
+    border-radius: 10em;
+}
+
+.switch.round label .lever:after {
+    width: 200px;
+    height: 26px;
+    border-radius: 50%;
+    left: 4px;
+    top: 4px;
+}
+
+.switch label {
+    cursor: pointer;
+}
+
+.switch label input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    left: 85px;
+}
+
+.switch label input[type=checkbox]:checked:not(:disabled)~.lever:active:after {
+    -webkit-box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4), 0 0 0 .9375rem rgba(170, 102, 204, .1);
+    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4), 0 0 0 .9375rem rgba(170, 102, 204, .1)
+}
+
+.switch label input[type=checkbox]:not(:disabled)~.lever:active:after {
+    -webkit-box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4), 0 0 0 .9375rem rgba(0, 0, 0, .08);
+    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4), 0 0 0 .9375rem rgba(0, 0, 0, .08)
+}
+
+.switch label .lever {
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-color: #E81D29;
+    border-radius: .9375rem;
+    margin-right: .625rem;
+    vertical-align: middle;
+    margin: 0 1rem;
+    width: 100px;
+    height: .9375rem;
+    -webkit-transition: background .3s ease;
+    -o-transition: background .3s ease;
+    transition: background .3s ease
+}
+
+.switch label .lever:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: #E03438;
+    -webkit-border-radius: 1.3125rem;
+    border-radius: 1.3125rem;
+    left: -.3125rem;
+    top: -.1875rem;
+    -webkit-box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4);
+    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4);
+    width: 1.3125rem;
+    height: 1.3125rem;
+    -webkit-transition: left .3s ease, background .3s ease, -webkit-box-shadow 1s ease;
+    transition: left .3s ease, background .3s ease, -webkit-box-shadow 1s ease;
+    -o-transition: left .3s ease, background .3s ease, box-shadow 1s ease;
+    transition: left .3s ease, background .3s ease, box-shadow 1s ease;
+    transition: left .3s ease, background .3s ease, box-shadow 1s ease, -webkit-box-shadow 1s ease
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
+    #gameArea table tr {
+        height: 66px !important;
+    }
+
+    .legendCard {
+        width: 66px !important;
+    }
+
+    .gameCard {
+        height: 80px;
+        margin: 5px auto;
+        border-radius: 4px;
+        min-width: 80px !important;
+        max-width: 205px !important;
+        cursor: pointer;
+    }
+
+    .gameCard span {
+        width: 90%;
+        background-color: #FFFFFF;
+        font-weight: bold;
+        text-align: center;
+    }
+}

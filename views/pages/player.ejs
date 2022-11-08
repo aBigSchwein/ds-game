@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<%- include('../partials/headers.ejs') %>
+</head>
+
+<body>
+	<%- include('../partials/nav.ejs') %>
+		<div class="container-fluid">
+			<div id="entryForm" class="row">
+				<h1 class="cent">Welcome</h1>
+				<div class="cent">
+					<div class="input-group mb-3 col-sm-auto">
+						<input type="text" class="form-control" placeholder="ENTER YOUR NAME" id="name" value="" />
+					</div>
+					<div class="input-group mb-3 col-sm-auto">
+						<input type="text" class="form-control" placeholder="ENTER ROOM CODE" id="gameId" />
+					</div>
+					<a href="/host" target="_blank" class="badge badge-warning">Don't have a room code?</a>
+					<div id="message col-sm-auto"></div>
+					<div class="switch mb-3 primary-switch">
+						<label>
+							<span class="text-danger lead pr-10">Red Team</span>
+							<input id="playerTeam" type="checkbox" checked="" />
+							<span class="lever"></span>
+							<span class="text-primary lead pl-10">Blue Team</span>
+						</label>
+					</div>
+					<div class="btn-group-toggle mb-3 col-sm-auto">
+						<label class="btn btn-outline-secondary">
+							<input type="checkbox" id="clueGiver" checked="" /> Clue Giver?
+						</label>
+					</div>
+					<div class="col col-sm-12">
+						<button id="joinRoom" class="btn btn-primary btn-block">Join Game</button>
+					</div>
+				</div>
+			</div>
+			<div id="playersInRoom" class="row"></div>
+			<div id="gameArea" class="row row-cols-5">
+			</div>
+		</div>
+		<script src="/js/app.js?r=<%= Math.floor(Math.random()*1000); %>"></script>
+</body>
+
+</html>

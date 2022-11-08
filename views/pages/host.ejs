@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<%- include('../partials/headers.ejs') %>
+</head>
+
+<body>
+	<%- include('../partials/nav.ejs') %>
+		<div class="container-fluid">
+			<div id="createBlock" class="row justify-content-center">
+				<h1>Welcome Host</h1>
+				<div class="input-group justify-content-center">
+					<button id="createRoom" class="btn btn-primary">Create Game</button>
+				</div>
+			</div>
+			<div id="howToJoin" class="text-center invisible">
+				<h1>Room Created!</h1>
+				<h3>Get players to join with the information below.</h3>
+			</div>
+			<div id="roomInfo" class="row justify-content-center"></div>
+			<div id="playersInRoom" class="row"></div>
+			<div class="input-group justify-content-center">
+				<button id="startGame" class="btn btn-success invisible">Start Game</button>
+			</div>
+			<div id="gameArea" class="row row-cols-5"></div>
+		</div>
+		<script src="/js/app.js?r=<%= Math.floor(Math.random()*1000); %>"></script>
+</body>
+
+</html>

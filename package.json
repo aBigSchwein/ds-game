@@ -1,0 +1,29 @@
+{
+    "name": "ds-game",
+    "version": "1.0.0",
+    "description": "A nodeJS+Socket.io game for words",
+    "type": "module",
+    "main": "server.js",
+    "dependencies": {
+        "consola": "^2.15.3",
+        "dotenv": "^16.0.3",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "nodemon": "^2.0.20",
+        "socket.io": "^4.5.3"
+    },
+    "engines": {
+        "node": "latest",
+        "npm": "latest"
+    },
+    "scripts": {
+        "start": "nodemon server.js -e ejs,css,js,png"
+    },
+    "keywords": [
+        "ds-game",
+        "game",
+        "slowcook"
+    ],
+    "author": "@aBigSchwein",
+    "license": "MIT"
+}
